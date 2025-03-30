@@ -12,8 +12,8 @@ public class GymTests
     {
         // Arrange
         var gym = GymFactory.CreateGym();
-        var roomOne = RoomFactory.CreateRoom(Guid.NewGuid());
-        var roomTwo = RoomFactory.CreateRoom(Guid.NewGuid());
+        var roomOne = RoomFactory.CreateRoom(id: Guid.NewGuid());
+        var roomTwo = RoomFactory.CreateRoom(id: Guid.NewGuid());
 
 
         // Act
