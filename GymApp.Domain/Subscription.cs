@@ -2,7 +2,15 @@
 
 public class Subscription
 {
-    private readonly Guid _id;
+    public Guid Id { get;}
 
     private readonly List<Guid> _gyms;
+
+    public int MaxRooms { get; } = 0;
+
+    public Subscription(Guid id, int maxRooms)
+    {
+        Id = id;
+        MaxRooms = maxRooms;
+    }
 }

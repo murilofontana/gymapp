@@ -2,7 +2,12 @@
 
 public class Room
 {
-    private readonly Guid _id;
+    public Guid Id { get; }
 
-    private readonly List<Guid> _sessionsId;
+    private readonly List<Guid> _sessionsId = new List<Guid>();
+
+    public Room(Guid id)
+    {
+        Id = id;
+    }
 }
