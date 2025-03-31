@@ -1,6 +1,6 @@
 using ErrorOr;
 
-namespace GymApp.Domain;
+namespace GymApp.Domain.SessionAggregate;
 
 public static class SessionErrors
 {

@@ -1,3 +1,5 @@
+using GymApp.Domain.Common.ValueObjects;
+
 namespace GymApp.Domain.UnitTests.TestConstants;
 
 public static partial class Constants

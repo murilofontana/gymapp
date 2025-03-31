@@ -1,4 +1,4 @@
-﻿namespace GymApp.Domain;
+﻿namespace GymApp.Domain.Common.Interfaces;
 
 public interface IDateTimeProvider
 {

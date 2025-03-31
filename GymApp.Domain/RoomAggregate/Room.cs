@@ -1,8 +1,11 @@
 ﻿using ErrorOr;
+using GymApp.Domain.Common;
+using GymApp.Domain.Common.Entities;
+using GymApp.Domain.SessionAggregate;
 
-namespace GymApp.Domain;
+namespace GymApp.Domain.RoomAggregate;
 
-public class Room
+public class Room : AggregateRoot
 {
     private readonly List<Guid> _sessionsId = new List<Guid>();
 
@@ -12,11 +15,8 @@ public class Room
 
     private readonly int maxDailySessions;
 
-    public Guid Id { get; }
-
-    public Room(Guid id, Guid gymId,int maxSessions = 0)
+    public Room(Guid? id, Guid gymId, int maxSessions = 0) : base(id ?? Guid.NewGuid())
     {
-        Id = id;
         _gymId = gymId;
         maxDailySessions = maxSessions;
     }

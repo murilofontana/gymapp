@@ -1,4 +1,5 @@
-﻿using GymApp.Domain.UnitTests.TestConstants;
+﻿using GymApp.Domain.TrainerAggregate;
+using GymApp.Domain.UnitTests.TestConstants;
 
 namespace GymApp.Domain.UnitTests.TestUtils.Trainers;
 

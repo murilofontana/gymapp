@@ -1,17 +1,18 @@
 ﻿using ErrorOr;
+using GymApp.Domain.Common;
+using GymApp.Domain.Common.Entities;
+using GymApp.Domain.SessionAggregate;
 
-namespace GymApp.Domain;
+namespace GymApp.Domain.ParticipantAggregate;
 
-public class Participant
+public class Participant : AggregateRoot
 {
     private readonly Schedule _schedule = Schedule.Empty();
 
     private readonly Guid _userId;
     private readonly List<Guid> _sessionIds = new();
 
-    public Guid Id { get; }
-
-    public Participant(Guid userId, Guid? id = null)
+    public Participant(Guid userId, Guid? id = null) : base(id ?? Guid.NewGuid())
     {
         _userId = userId;
         Id = id ?? Guid.NewGuid();

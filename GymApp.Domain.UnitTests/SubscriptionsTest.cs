@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using GymApp.Domain.SubscriptionAggregate;
 using GymApp.Domain.UnitTests.TestUtils.Gyms;
 using GymApp.Domain.UnitTests.TestUtils.Subscriptions;
 

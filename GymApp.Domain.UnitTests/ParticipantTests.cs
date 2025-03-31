@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using GymApp.Domain.ParticipantAggregate;
 using GymApp.Domain.UnitTests.TestConstants;
 using GymApp.Domain.UnitTests.TestUtils.Common;
 using GymApp.Domain.UnitTests.TestUtils.Participants;

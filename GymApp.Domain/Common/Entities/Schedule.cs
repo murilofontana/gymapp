@@ -1,18 +1,17 @@
 ﻿using ErrorOr;
+using GymApp.Domain.Common.ValueObjects;
 
-namespace GymApp.Domain;
+namespace GymApp.Domain.Common.Entities;
 
-public class Schedule
+public class Schedule : Entity
 {
     private readonly Dictionary<DateOnly, List<TimeRange>> _calendar = new();
-    private readonly Guid _id;
 
     public Schedule(
         Dictionary<DateOnly, List<TimeRange>>? calendar = null,
-        Guid? id = null)
+        Guid? id = null) : base(id ?? Guid.NewGuid())
     {
         _calendar = calendar ?? new();
-        _id = id ?? Guid.NewGuid();
     }
 
     public static Schedule Empty()
@@ -62,5 +61,5 @@ public class Schedule
         return Result.Success;
     }
 
-    private Schedule() { }
+    private Schedule() : base(Guid.NewGuid()) { }
 }

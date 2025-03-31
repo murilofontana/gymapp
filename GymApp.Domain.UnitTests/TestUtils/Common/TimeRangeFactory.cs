@@ -1,4 +1,6 @@
-﻿namespace GymApp.Domain.UnitTests.TestUtils.Common;
+﻿using GymApp.Domain.Common.ValueObjects;
+
+namespace GymApp.Domain.UnitTests.TestUtils.Common;
 
 public static class TimeRangeFactory
 {

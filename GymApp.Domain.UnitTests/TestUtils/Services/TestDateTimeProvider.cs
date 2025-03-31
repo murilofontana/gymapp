@@ -1,3 +1,5 @@
+using GymApp.Domain.Common.Interfaces;
+
 namespace GymApp.Domain.UnitTests.TestUtils.Services;
 
 public class TestDateTimeProvider : IDateTimeProvider
