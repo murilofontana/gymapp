@@ -8,6 +8,8 @@ public class Room
 
     private readonly Guid _gymId;
 
+    public Schedule _schedule { get; } = Schedule.Empty();
+
     private readonly int maxDailySessions;
 
     public Guid Id { get; }
@@ -29,6 +31,13 @@ public class Room
         if (_sessionsId.Count >= maxDailySessions)
         {
             return RoomErrors.CannotHaveMoreSessionsThanSubscriptionAllowed;
+        }
+
+        var addEventResult = _schedule.BookTimeSlot(session.Date, session.Time);
+
+        if (addEventResult.IsError && addEventResult.FirstError.Type == ErrorType.Conflict)
+        {
+            return RoomErrors.CannotHaveTwoOrMoreOverlappingSessions;
         }
 
         _sessionsId.Add(session.Id);

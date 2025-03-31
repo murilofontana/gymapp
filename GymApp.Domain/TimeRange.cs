@@ -1,3 +1,5 @@
+using ErrorOr;
+
 namespace GymApp.Domain;
 
 public class TimeRange
@@ -9,5 +11,23 @@ public class TimeRange
     {
         Start = start;
         End = end;
+    }
+
+    public static ErrorOr<TimeRange> FromDateTimes(DateTime start, DateTime end)
+    {
+        if (start.Date != end.Date || start >= end)
+        {
+            return Error.Validation();
+        }
+
+        return new TimeRange(TimeOnly.FromDateTime(start), TimeOnly.FromDateTime(end));
+    }
+
+    public bool OverlapsWith(TimeRange other)
+    {
+        if (Start >= other.End) return false;
+        if (other.Start >= End) return false;
+
+        return true;
     }
 }
