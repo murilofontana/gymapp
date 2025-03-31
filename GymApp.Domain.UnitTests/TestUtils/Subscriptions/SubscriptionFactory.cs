@@ -4,9 +4,14 @@ namespace GymApp.Domain.UnitTests.TestUtils.Subscriptions;
 
 public class SubscriptionFactory
 {
-    public static Subscription CreateSubscription(Guid? id = null)
+    public static Subscription CreateSubscription(
+        SubscriptionType? subscriptionType = null,
+        Guid? adminId = null,
+        Guid? id = null)
     {
         return new Subscription(
-            id ?? Constants.Subscriptions.Id, Constants.Subscriptions.MaxGymsFreeTier);
+            subscriptionType: subscriptionType ?? Constants.Subscriptions.DefaultSubscriptionType,
+            adminId ?? Constants.Admin.Id,
+            id ?? Constants.Subscriptions.Id);
     }
 }
