@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GymApp.Domain", "GymApp.Domain", "{D4EB5DA4-A564-42E7-89F5-65B7C36F4162}"
 EndProject
@@ -10,6 +10,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymApp.Domain.UnitTests", "GymApp.Domain.UnitTests\GymApp.Domain.UnitTests.csproj", "{55AD3914-56F8-4B01-9E39-D1B5E97D5BFA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymApp.Domain", "GymApp.Domain\GymApp.Domain.csproj", "{36A6A840-E2D5-4B08-A59B-C440CD949083}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GymApp.Application", "GymApp.Application", "{6562A21F-9600-413E-AC1C-160B67EBB5CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymApp.Application", "GymApp.Application\GymApp.Application.csproj", "{1B9632C8-2F1D-4D2C-A45D-E2B586BA924E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +29,10 @@ Global
 		{36A6A840-E2D5-4B08-A59B-C440CD949083}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36A6A840-E2D5-4B08-A59B-C440CD949083}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36A6A840-E2D5-4B08-A59B-C440CD949083}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B9632C8-2F1D-4D2C-A45D-E2B586BA924E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B9632C8-2F1D-4D2C-A45D-E2B586BA924E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B9632C8-2F1D-4D2C-A45D-E2B586BA924E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B9632C8-2F1D-4D2C-A45D-E2B586BA924E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,5 +40,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{55AD3914-56F8-4B01-9E39-D1B5E97D5BFA} = {0A26A95C-3BAA-4D86-B0D8-6D487FEF07B3}
 		{36A6A840-E2D5-4B08-A59B-C440CD949083} = {D4EB5DA4-A564-42E7-89F5-65B7C36F4162}
+		{1B9632C8-2F1D-4D2C-A45D-E2B586BA924E} = {6562A21F-9600-413E-AC1C-160B67EBB5CC}
 	EndGlobalSection
 EndGlobal
